@@ -16,11 +16,13 @@ import { Provider } from 'react-redux';
 
 import Header from './components/Header/Header';
 import { mainListItems, adminListItems } from './components/Nav/ListItems';
-import Users from './containers/Users/Users';
-import Dashboard from './containers/Dashboard/Dashboard';
+import Users from './containers/Users/Users.container';
+import Recipient from './containers/Recipient/Recipient.container';
+import Donor from './containers/Donor/Donor.container';
+import Dashboard from './containers/Dashboard/Dashboard.container';
 
 import styles from './App.style';
-import store from './store';
+import store from './redux/store';
 
 class App extends React.Component {
   state = {
@@ -86,7 +88,9 @@ class App extends React.Component {
                   exact path="/" 
                   component= {Dashboard} // render={(props) => <Dashboard {...props} />}
                 />
-                <Route path="/users" component={Users} />
+                <Route exact path="/users" component={Users} />
+                <Route exact path="/recipient" component={Recipient} />
+                <Route exact path="/donor" component={Donor} />
               </React.Fragment>
             </main>
           </div>

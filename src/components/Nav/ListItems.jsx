@@ -21,23 +21,23 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItem>
-    <ListItem button>
+    <ListItem button component={Link} to="/recipient">
       <ListItemIcon>
         <AccessibilityNew />
       </ListItemIcon>
-      <ListItemText primary="Penerima" />
+      <ListItemText primary="Recipient" />
     </ListItem>
-    <ListItem button>
+    <ListItem button component={Link} to="/donor">
       <ListItemIcon>
         <SentimentSatisfiedAlt />
       </ListItemIcon>
-      <ListItemText primary="Donatur" />
+      <ListItemText primary="Donor" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
-      <ListItemText primary="Wilayah" />
+      <ListItemText primary="Area" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
