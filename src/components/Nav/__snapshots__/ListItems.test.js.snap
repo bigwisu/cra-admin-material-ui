@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainListItems snapshots MainListItems snapshot test 1`] = `<mainListItems />`;
+
+exports[`adminListItems snapshots adminListItems snapshot test 1`] = `<adminListItems />`;
