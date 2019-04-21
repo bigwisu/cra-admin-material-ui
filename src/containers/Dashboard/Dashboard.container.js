@@ -1,10 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 
 import SampleChart from '../Sample/SimpleLineChart';
-// import SampleTable from '../Sample/SimpleTable';
-import StarWars from '../Sample/StarWars';
+import SampleTable from '../Sample/SimpleTable';
 
 class Dashboard extends React.Component {
   componentDidMount() {
@@ -15,7 +13,7 @@ class Dashboard extends React.Component {
     return (
       <React.Fragment>
         <SampleChart />
-        <StarWars />
+        <SampleTable />
       </React.Fragment>
     );
   }

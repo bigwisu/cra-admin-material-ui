@@ -10,8 +10,9 @@ import ImageIcon from '@material-ui/icons/Image';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
-import AccessibilityNew from '@material-ui/icons/AccessibilityNew';
 import ViewColumn from '@material-ui/icons/ViewColumn';
+
+import Deathstar from '../Assets/Deathstar';
 
 export const mainListItems = (
   <div>
@@ -23,7 +24,9 @@ export const mainListItems = (
     </ListItem>
     <ListItem button component={Link} to="/starwars">
       <ListItemIcon>
-        <AccessibilityNew />
+        <div style={{ width: 24 }}>
+          <Deathstar />
+        </div>
       </ListItemIcon>
       <ListItemText primary="Starwars" />
     </ListItem>
@@ -31,7 +34,7 @@ export const mainListItems = (
       <ListItemIcon>
         <ImageIcon />
       </ListItemIcon>
-      <ListItemText primary="Gifs" />
+      <ListItemText primary="GIF\'s" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>

@@ -20,7 +20,7 @@ const styles = {
   },
 };
 
-class StarWars extends React.Component {
+class StarwarsCharacters extends React.Component {
   constructor(props) {
     super(props);
 
@@ -81,8 +81,8 @@ class StarWars extends React.Component {
   }
 }
 
-StarWars.propTypes = {
+StarwarsCharacters.propTypes = {
   classes: PropTypes.instanceOf(Object).isRequired
 };
 
-export default withStyles(styles)(StarWars);
+export default withStyles(styles)(StarwarsCharacters);

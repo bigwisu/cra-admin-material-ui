@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Characters from './Characters';
 
 class Starwars extends React.Component {
   componentDidMount() {
@@ -8,7 +9,9 @@ class Starwars extends React.Component {
 
   render() {
     return (
-      <h1>Starwars</h1>
+      <div>
+        <Characters />
+      </div>
     );
   }
 }
