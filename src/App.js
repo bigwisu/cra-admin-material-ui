@@ -17,8 +17,8 @@ import { Provider } from 'react-redux';
 import Header from './components/Header/Header';
 import { mainListItems, adminListItems } from './components/Nav/ListItems';
 import Users from './containers/Users/Users.container';
-import Recipient from './containers/Recipient/Recipient.container';
-import Donor from './containers/Donor/Donor.container';
+import Starwars from './containers/Starwars/Starwars.container';
+import Gifs from './containers/Gifs/Gifs.container';
 import Dashboard from './containers/Dashboard/Dashboard.container';
 
 import styles from './App.style';
@@ -89,8 +89,8 @@ class App extends React.Component {
                   component= {Dashboard} // render={(props) => <Dashboard {...props} />}
                 />
                 <Route exact path="/users" component={Users} />
-                <Route exact path="/recipient" component={Recipient} />
-                <Route exact path="/donor" component={Donor} />
+                <Route exact path="/starwars" component={Starwars} />
+                <Route exact path="/gifs" component={Gifs} />
               </React.Fragment>
             </main>
           </div>

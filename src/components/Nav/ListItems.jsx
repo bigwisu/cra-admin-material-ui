@@ -6,11 +6,11 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import PeopleIcon from '@material-ui/icons/People';
+import ImageIcon from '@material-ui/icons/Image';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import AccessibilityNew from '@material-ui/icons/AccessibilityNew';
-import SentimentSatisfiedAlt from '@material-ui/icons/SentimentSatisfiedAlt';
 import ViewColumn from '@material-ui/icons/ViewColumn';
 
 export const mainListItems = (
@@ -21,17 +21,17 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItem>
-    <ListItem button component={Link} to="/recipient">
+    <ListItem button component={Link} to="/starwars">
       <ListItemIcon>
         <AccessibilityNew />
       </ListItemIcon>
-      <ListItemText primary="Recipient" />
+      <ListItemText primary="Starwars" />
     </ListItem>
-    <ListItem button component={Link} to="/donor">
+    <ListItem button component={Link} to="/gifs">
       <ListItemIcon>
-        <SentimentSatisfiedAlt />
+        <ImageIcon />
       </ListItemIcon>
-      <ListItemText primary="Donor" />
+      <ListItemText primary="Gifs" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
