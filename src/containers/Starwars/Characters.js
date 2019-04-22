@@ -42,14 +42,15 @@ class StarwarsCharacters extends React.Component {
 
     axios.get(url)
       .then((response) => {
-        console.log(response.data.results)
-        this.setState((state, props) => ({ data: response.data.results }));
+        this.setState(() => ({ data: response.data.results }));
       })
       .catch(error => console.error(error));
   }
 
   render() {
     const { classes } = this.props;
+    const { data } = this.state;
+
     return (
       <Paper className={classes.root}>
         <Table className={classes.table}>
@@ -63,7 +64,7 @@ class StarwarsCharacters extends React.Component {
             </TableRow>
           </TableHead>
           <TableBody>
-            {this.state.data.map(n => (
+            {data.map(n => (
               <TableRow key={uid(n)}>
                 <TableCell component="th" scope="row">
                   {n.name}

@@ -6,7 +6,8 @@ import SampleTable from '../Sample/SimpleTable';
 
 class Dashboard extends React.Component {
   componentDidMount() {
-    this.props.dispatch({ type: 'SET_TITLE', payload: 'Dashboard' });
+    const { props } = this;
+    props.dispatch({ type: 'SET_TITLE', payload: 'Dashboard' });
   }
 
   render() {

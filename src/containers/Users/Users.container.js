@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 
 class Users extends React.Component {
   componentDidMount() {
-    this.props.dispatch({ type: 'SET_TITLE', payload: 'Users' });
+    const { props } = this;
+    props.dispatch({ type: 'SET_TITLE', payload: 'Users' });
   }
 
   render() {

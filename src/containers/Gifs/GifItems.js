@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -11,25 +10,15 @@ const key = 'FKFXYjSDcMw06kAjvkYVs1YHEbBOFyoC';
 const rating = 'PG-13';
 const limit = 28;
 
-const styles = theme => ({
+const styles = () => ({
   root: {
     flexGrow: 1,
   },
   paper: {
-    padding: theme.spacing.unit * 2,
-    margin: 'auto',
-    textAlign: 'center',
-    maxWidth: 500,
-  },
-  image: {
-    width: 220,
-    height: 220,
-  },
-  img: {
-    margin: 'auto',
-    display: 'block',
-    maxWidth: '100%',
-    maxHeight: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    overflow: 'hidden'
   }
 });
 
@@ -57,22 +46,43 @@ class GifItems extends React.Component {
 
     axios.get(url)
       .then((response) => {
-        console.log(response.data.data);
-        this.setState((state, props) => ({ data: response.data.data }));
+        this.setState(() => ({ data: response.data.data }));
       })
       .catch(error => console.error(error));
   }
 
+  handleClick(id) {
+    const { data } = this.state;
+    const idx = data.findIndex(img => img.id === id);
+
+    const obj = data[idx];
+    const selectedObj = {
+      id: obj.id,
+      images: {
+        fixed_height_still: {
+          url: obj.images.fixed_height.url
+        },
+        fixed_height: {
+          url: obj.images.fixed_height_still.url
+        }
+      }
+    };
+
+    data.splice(idx, 1, selectedObj);
+    this.setState(() => ({ data }));
+  }
+
   render() {
     const { classes } = this.props;
+    const { data } = this.state;
 
     return (
       <div className={classes.root}>
         <Grid container spacing={24}>
-          {this.state.data.map(n => (
+          {data.map(n => (
             <Grid key={n.id} item xs={3}>
               <Paper className={classes.paper}>
-                <ButtonBase className={classes.image}>
+                <ButtonBase className={classes.image} onClick={this.handleClick.bind(this, n.id)}>
                   <img className={classes.img} alt="complex" src={n.images.fixed_height_still.url} />
                 </ButtonBase>
               </Paper>

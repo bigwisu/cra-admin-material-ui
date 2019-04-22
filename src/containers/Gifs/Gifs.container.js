@@ -4,7 +4,8 @@ import GifItems from './GifItems';
 
 class Gifs extends React.Component {
   componentDidMount() {
-    this.props.dispatch({ type: 'SET_TITLE', payload: 'GIF\'s' });
+    const { props } = this;
+    props.dispatch({ type: 'SET_TITLE', payload: 'GIF\'s' });
   }
 
   render() {

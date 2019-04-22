@@ -4,7 +4,8 @@ import Characters from './Characters';
 
 class Starwars extends React.Component {
   componentDidMount() {
-    this.props.dispatch({ type: 'SET_TITLE', payload: 'Starwars' });
+    const { props } = this;
+    props.dispatch({ type: 'SET_TITLE', payload: 'Starwars' });
   }
 
   render() {

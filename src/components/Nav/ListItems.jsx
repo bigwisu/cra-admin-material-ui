@@ -34,7 +34,7 @@ export const mainListItems = (
       <ListItemIcon>
         <ImageIcon />
       </ListItemIcon>
-      <ListItemText primary="GIF\'s" />
+      <ListItemText primary="GIF's" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
